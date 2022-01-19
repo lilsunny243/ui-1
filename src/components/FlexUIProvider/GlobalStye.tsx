@@ -65,7 +65,6 @@ body {
     color: ${({ theme }) => theme.text.primary};
     font-size: 16px;
     background: ${({ theme }) => theme.bg.primary};
-    transition: all 0.2s linear;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

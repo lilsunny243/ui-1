@@ -1,3 +1,4 @@
+import React from "react";
 import { ThemeProvider as $ThemeProvider } from "styled-components";
 import GlobalStyle from "./GlobalStye";
 import theme from "../../theme";
