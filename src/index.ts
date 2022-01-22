@@ -6,3 +6,4 @@ export { default as Spacer } from "./components/Spacer";
 export { default as Divider } from "./components/Divider";
 export { default as Flex } from "./components/Flex";
 export { default as Text } from "./components/Text";
+export { default as InfoBox } from "./components/InfoBox";
