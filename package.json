@@ -1,24 +1,23 @@
 {
   "name": "@flexpool/ui",
   "version": "0.0.2",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     }
   },
-  "type": "module",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "vite",
     "tsc": "tsc",
-    "build:tsup": "tsup src/index.ts --format esm,cjs --dts --minify",
-    "build": "yarn build:tsup",
+    "build:tsup": "tsup src/index.ts --format esm,cjs --dts-only",
+    "build": "vite build && yarn build:tsup",
     "preview": "vite preview"
   },
   "dependencies": {

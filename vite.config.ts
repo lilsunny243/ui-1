@@ -8,4 +8,20 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    minify: false,
+    lib: {
+      entry: path.resolve(__dirname, "src/index.ts"),
+      name: "FlexUI",
+      fileName: (format) => `index.${format}.js`,
+    },
+    rollupOptions: {
+      external: ["react", "styled-components"],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
+    },
+  },
 });
