@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "vite",
     "tsc": "tsc",
-    "build:tsup": "tsup src/index.ts --format esm,cjs --dts-only",
+    "build:tsup": "tsup src/index.ts --format esm,cjs --dts-only --minify",
     "build": "vite build && yarn build:tsup",
     "preview": "vite preview"
   },
