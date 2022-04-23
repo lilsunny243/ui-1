@@ -7,3 +7,4 @@ export { default as Divider } from "./components/Divider";
 export { default as Flex } from "./components/Flex";
 export { default as Text } from "./components/Text";
 export { default as InfoBox } from "./components/InfoBox";
+export { default as Content } from "./components/Content";
