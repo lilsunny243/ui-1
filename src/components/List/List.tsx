@@ -120,7 +120,7 @@ const ListRow = React.memo(
   }
 );
 
-export const DynamicList = <D extends {}, CP extends {}>(
+const DynamicList = <D extends {}, CP extends {}>(
   props: DynamicListProps<D, CP>
 ) => {
   const {
