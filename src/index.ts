@@ -17,5 +17,6 @@ export * from "./components/Loader/LoaderSpinner";
 export { default as Img } from "./components/Img";
 export { default as Skeleton } from "./components/Skeleton";
 export { default as Typography } from "./components/Typography";
+export { default as Code } from "./components/Code";
 
 export type { UIVariant } from "./theme";
