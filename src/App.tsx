@@ -13,6 +13,7 @@ import DescriptionList from "./components/DescriptionList";
 import Card, { CardTitle } from "./components/Card";
 import Tooltip, { TooltipContent } from "./components/Tooltip";
 import DynamicList from "./components/List";
+import Code from "./components/Code";
 
 function App() {
   return (
@@ -203,6 +204,12 @@ function App() {
           ]}
           data={["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"]}
         />
+
+        <Divider />
+
+        <Heading>Code block</Heading>
+        <Spacer />
+        <Code language="javascript">{`console.log("Hello world!")`}</Code>
 
         <Divider />
       </Content>
