@@ -21,19 +21,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tippyjs/react": "^4.2.6",
     "@types/styled-components": "^5.1.21",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
   },
   "peerDependencies": {
     "styled-components": ">=5"
   },
   "devDependencies": {
-    "styled-components": "^5.3.3",
     "@types/node": "^17.0.8",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",
+    "styled-components": "^5.3.3",
     "tsup": "^5.11.11",
     "typescript": "^4.5.4",
     "vite": "^2.7.2"

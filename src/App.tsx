@@ -11,6 +11,8 @@ import Content from "./components/Content";
 import InfoBox from "./components/InfoBox";
 import DescriptionList from "./components/DescriptionList";
 import Card, { CardTitle } from "./components/Card";
+import Tooltip, { TooltipContent } from "./components/Tooltip";
+import DynamicList from "./components/List";
 
 function App() {
   return (
@@ -163,7 +165,46 @@ function App() {
           ]}
         />
 
+        <Divider />
+
+        <Heading>Tooltip</Heading>
+
+        <Tooltip>
+          <TooltipContent>This is a tooltip</TooltipContent>
+        </Tooltip>
+
+        <Divider />
+
+        <DynamicList
+          columns={[
+            { title: "Column 1", Component: ({ data }) => <div>{data}</div> },
+            { title: "Column 1", Component: ({ data }) => <div>{data}</div> },
+          ]}
+          data={["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"]}
+        />
+
         <Spacer />
+
+        <Heading h={4}>With tooltip</Heading>
+
+        <DynamicList
+          columns={[
+            {
+              title: "Column 1",
+              Component: ({ data }) => (
+                <>
+                  <Tooltip wrapIcon={false} icon={<span>{data}</span>}>
+                    <TooltipContent>{data}</TooltipContent>
+                  </Tooltip>
+                </>
+              ),
+            },
+            { title: "Column 1", Component: ({ data }) => <div>{data}</div> },
+          ]}
+          data={["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"]}
+        />
+
+        <Divider />
       </Content>
     </FlexUIProvider>
   );
