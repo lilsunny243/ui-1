@@ -28,8 +28,11 @@ export const theme = {
   },
   border: {
     color: "var(--border-color)",
+    default: "1px solid var(--border-color)",
   },
+
   overlay: "var(--overlay)",
+  boxShadow: `box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);`,
 };
 
 export type UIVariant = keyof typeof theme.color;

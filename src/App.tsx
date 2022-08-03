@@ -14,6 +14,7 @@ import Card, { CardTitle } from "./components/Card";
 import Tooltip, { TooltipContent } from "./components/Tooltip";
 import DynamicList from "./components/List";
 import Code from "./components/Code";
+import Select from "./components/Select";
 
 function App() {
   return (
@@ -212,6 +213,22 @@ function App() {
         <Code language="javascript">{`console.log("Hello world!")`}</Code>
 
         <Divider />
+
+        <Heading>Select</Heading>
+        <Spacer />
+
+        <Select
+          name="fruit"
+          selectedItem={{ label: "Apple", value: "apple" }}
+          items={[
+            { label: "Apple", value: "apple" },
+            { label: "Pear", value: "pear" },
+            { label: "Grape", value: "grape" },
+          ]}
+          onSelectedItemChange={(changes) => {
+            alert(changes.selectedItem!.value);
+          }}
+        />
       </Content>
     </FlexUIProvider>
   );
