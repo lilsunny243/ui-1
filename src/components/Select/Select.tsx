@@ -29,18 +29,19 @@ type SelectButtonProps = {
   toggleButtonProps: any;
 };
 
-const SelectButton = React.forwardRef<HTMLButtonElement, SelectButtonProps>(
-  ({ children, placeholder, ...rest }, ref) => {
-    return (
-      <SCSelectButton ref={ref} {...rest}>
-        {children || <Placeholder>{placeholder}</Placeholder>}
-        <SelectArrowSvg>
-          <SVGArrow />
-        </SelectArrowSvg>
-      </SCSelectButton>
-    );
-  }
-);
+export const SelectButton = React.forwardRef<
+  HTMLButtonElement,
+  SelectButtonProps
+>(({ children, placeholder, ...rest }, ref) => {
+  return (
+    <SCSelectButton ref={ref} {...rest}>
+      {children || <Placeholder>{placeholder}</Placeholder>}
+      <SelectArrowSvg>
+        <SVGArrow />
+      </SelectArrowSvg>
+    </SCSelectButton>
+  );
+});
 
 type SelectProps = {
   disabled?: boolean;
